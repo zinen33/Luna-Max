@@ -69,7 +69,7 @@ handleCommand.permssionNotEnough=ليس لديك إذن لاستخدام الأ�
 handleCommand.cantSetMessageReaction=Having some unexpected error at setMessageReaction, error: %1
 handleCommand.executeCommand=[ %1 ] الأمر المستخدم: %2 من قبل المستخدم: %3 at thread: %4 | Args included: %5 | Processing time: %6ms
 handleCommand.commandError=Having some unexpected error when using command %1, error: %2
-handleCommand.notMatched=🥷 هاذ الامر يعمل بدون بادئة 🥷\n     🥷❪━  𝙱𝙾𝚃 𝙻𝚄𝙽𝙰  ━❫🥷
+handleCommand.notMatched=🙅🏻‍♀️ هاذ الامر يعمل بدون بادئة \n  ❪━  𝙱𝙾𝚃 𝙻𝚄𝙽𝙰  ━❫
 # includes/handle/handleCommandEvent.js
 
 handleCommandEvent.moduleError=Having some unexpected error when using command %1, error: %2
