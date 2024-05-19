@@ -6,7 +6,7 @@ name: "حماية",
 version: "1.0.8",
 hasPermssion: 1,
 credits: "نوت دفاين",
-description: "〘 مسؤول مجموعة 〙",
+description: "مسؤول مجموعة",
 commandCategory: "مسؤولي المجموعات",
 usages: "",
 cooldowns: 0
