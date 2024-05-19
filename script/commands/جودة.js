@@ -4,6 +4,7 @@
   hasPermssion: 0,
   credits: 'scorpion',
   description: 'يعدل جودة صورة',
+  usePrefix: true,
   commandCategory: '〘 خدمات 〙',
   usages: '[image]',
   cooldowns: 3
