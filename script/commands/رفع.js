@@ -32,7 +32,7 @@ get config() {
       credits: "🥷MOHAMED🇦🇱X🇦🇱ZINO🥷",
       usePrefix: false,
       description: "تحويل صورة الى رابط",
-      commandCategory: "〘 خدمات 〙",
+      commandCategory: "خدمات",
       usages: "رد على صورة",
       cooldowns: 5
     };
