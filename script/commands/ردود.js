@@ -3,7 +3,7 @@ module.exports.config = {
   version: "1.0.0",
   hasPermssion: 0,
   credits: "ZINO く愛",
-  description: "〘 النظام 〙",
+  description: "النظام",
   MOHAMED: true,
   usePrefix: false,
   commandCategory: "تصنيف الامر",
