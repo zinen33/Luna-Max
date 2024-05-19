@@ -6,7 +6,7 @@ module.exports.config = {
     MOHAMED: true,
     usePrefix:true,
     description: "وييي",
-    commandCategory: "〘 النظام 〙",
+    commandCategory: "النظام",
     usages: "كنية",
     cooldowns: 5
 };
