@@ -7,7 +7,7 @@ module.exports.config = {
     credits: "Api by jerome",
     description: "Gpt architecture",
     usePrefix: false,
-    commandCategory: "GPT4",
+    commandCategory: "خدمات",
     cooldowns: 1,
 };
 
