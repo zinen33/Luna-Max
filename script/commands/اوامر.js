@@ -62,7 +62,7 @@ module.exports.run = async function ({ api, event, args }) {
 
   for (const categoryName of categories) {
     const categoryNameSansBold = categoryName.split("").map(c => mathSansBold[c] || c).join("");
-    msg += `╭─❍〘 ${categoryNameSansBold} 〙\n`;
+    msg += `╭─❍〘${categoryNameSansBold}〙\n`;
     msg += categorizedCommands.get(categoryName).join("\n");
     msg += "\n╰───────────⟡\n";
   }
