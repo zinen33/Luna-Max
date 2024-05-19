@@ -5,7 +5,7 @@
   credits: 'scorpion',
   description: 'يعدل جودة صورة',
   usePrefix: true,
-  commandCategory: '〘 خدمات 〙',
+  commandCategory: 'خدمات',
   usages: '[image]',
   cooldowns: 3
 };
