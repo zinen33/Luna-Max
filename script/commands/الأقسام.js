@@ -4,6 +4,8 @@ module.exports.config = {
   hasPermission: 0,
   credits: "baby august",
   description: "مرشد المبتدئين الجدد",
+  MOHAMED: true,
+   usePrefix: false,
   commandCategory: "البوت",
   usages: "قم برؤية كل الأوامر",
   cooldowns: 5,
