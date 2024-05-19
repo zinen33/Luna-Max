@@ -5,8 +5,8 @@ module.exports.config = {
   credits: "ZINO X MOHAMMED",
   description: "مرشد المبتدئين الجدد",
   MOHAMED: true,
-   usePrefix: false,
-  commandCategory: "البوت",
+  usePrefix: false,
+  commandCategory: "",
   usages: "قم برؤية كل الأوامر",
   cooldowns: 5,
   envConfig: {
