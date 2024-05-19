@@ -5,7 +5,7 @@ module.exports.config = {
     credits: "عمر",
     description: "تتحدا حد بمنشن",
     usePrefix: true,
-    commandCategory: "〘 العاب 〙",
+    commandCategory: "العاب",
     usages: "[للشخص لتريده@حط]",
     cooldowns: 5,
     dependencies: {
