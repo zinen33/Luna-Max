@@ -5,7 +5,7 @@ module.exports.config = {
   credits: "MOHAMED X ZINO",
   usePrefix: false,
   description: "قم بتشغيل الأغنية التي تحب",
-  commandCategory: "〘 خدمات 〙",
+  commandCategory: "خدمات",
   usages: "[إسم الأغنية]",
   cooldowns: 10,
   dependencies: {
