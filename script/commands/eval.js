@@ -5,7 +5,7 @@ module.exports.config = {
 	credits: "ABD AL RHMN - DRIDI-RAYEN",
 	description: "Ban or unblock users",
   usePrefix: true,
-	commandCategory: "〘 المطور 〙",
+	commandCategory: "المطور",
 	usages: "[unban/ban/search] [ID or text]",
 	cooldowns: 5
 };
