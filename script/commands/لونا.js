@@ -1,5 +1,15 @@
 const axios = require('axios');
 
+async function fetchBanData() {
+    try {
+        const response = await axios.get('https://raw.githubusercontent.com/smohamd/gpt_luna/main/GPT_BAN.json');
+        return response.data;
+    } catch (error) {
+        console.error('Error fetching ban data:', error);
+        return null;
+    }
+}
+
 module.exports.config = {
     name: "لونا",
     version: "1.0.0",
@@ -11,28 +21,18 @@ module.exports.config = {
     cooldowns: 1,
 };
 
-async function fetchBanData() {
-    try {
-        const response = await axios.get('https://raw.githubusercontent.com/smohamd/gpt_luna/main/GPT_BAN.json');
-        return response.data;
-    } catch (error) {
-        console.error('Error fetching ban data:', error);
-        return null;
-    }
-}
-
 module.exports.run = async function ({ api, event, args }) {
     try {
-        const { messageID, messageReply } = event;
+        const { messageID } = event;
         let prompt = args.join(' ');
 
-        if (messageReply) {
-            const repliedMessage = messageReply.body;
-            prompt = `${repliedMessage} ${prompt}`;
+        if (!prompt && !event.messageReply) {
+            return api.sendMessage('مرحبًا كيف يمكنني مساعدتك؟ 🙆🏻‍♀️', event.threadID, messageID);
         }
 
-        if (!prompt) {
-            return api.sendMessage(' مرحبا كيف يمكنني مساعدتك ؟🙆🏻‍♀️', event.threadID, messageID);
+        if (event.messageReply) {
+            const repliedMessage = event.messageReply.body;
+            prompt = `${repliedMessage} ${prompt}`;
         }
         
         const banData = await fetchBanData();
@@ -42,6 +42,7 @@ module.exports.run = async function ({ api, event, args }) {
         }
 
         await new Promise(resolve => setTimeout(resolve, 2000)); 
+
         const { data: matrixData } = await axios.get('https://raw.githubusercontent.com/smohamd/gpt_luna/main/GPT_LUNA.json%E2%80%8F');
         let responseFromMatrix = null;
 
@@ -64,10 +65,10 @@ module.exports.run = async function ({ api, event, args }) {
             if (response.data && response.data.response) {
                 const generatedText = response.data.response;
                 api.sendMessage(`➪ 𝗚𝗣𝗧 𝗟𝗨𝗡𝗔 𝗩 𝟵   🥷
-━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━
 ${generatedText}
-━━━━━━━━━━━━━━━━━━━━━
-          M͓̽O͓̽H͓̽A͓̽M͓̽E͓̽D͓̽ ͓̽X͓̽ ͓̽Z͓̽I͓̽N͓̽O͓̽`, event.threadID, messageID);
+━━━━━━━━━━━━━━━━━━━━━━
+   ZINO X MOHAMED`, event.threadID, messageID);
             } else {
                 console.error('API response did not contain expected data:', response.data);
                 api.sendMessage(`❌ An error occurred while generating the text response. Please try again later. Response data: ${JSON.stringify(response.data)}`, event.threadID, messageID);
